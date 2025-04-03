@@ -1,0 +1,242 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* En-tête */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .logo h1 {
+    font-size: auto;
+    margin-bottom: auto;
+}
+
+header .logo p {
+    font-size: auto;
+    color: #ccc;
+}
+
+/* Menu de navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+    display: flex;
+    background-color: #333;
+}
+
+nav ul li {
+    position: inherit;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;  /* Aligne le texte et l'image */
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* Styles des logos */
+nav .logo {
+    width: 20px; /* Ajustez la taille du logo */
+    height: auto; /* Maintient les proportions du logo */
+    margin-right: 10px; /* Espacement entre l'image et le texte */
+}
+
+nav .deroulant:hover > .sous {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+nav .sous {
+    display: none;
+    position: inherit;
+    top: 100%; /* Position en bas du menu parent */
+    left: 0;
+    background-color: #444;
+    min-width: 180px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav .sous li {
+    padding: 8px 16px;
+}
+
+nav .sous-sous {
+    display: none;
+    position: inherit;
+    top: 0;
+    left: 100%; /* Position à droite du menu parent */
+    background-color: #555;
+    z-index: 20;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav .sous-deroulant:hover > .sous-sous {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+nav .sous-deroulant:hover > .sous {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Animation de rebond de la balle lors du survol du menu principal */
+.basketball-icon-nav-deroulant {
+    font-size: auto;
+    transition: transform 0.3s ease;
+}
+
+.deroulant:hover > a .basketball-icon-nav-deroulant{
+    animation: bounce 0.6s ease forwards;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animation de rotation de la balle lors du survol du sous-menu */
+.basketball-icon-nav-sous-deroulant {
+    font-size: auto;
+    transition: transform 0.3s ease;
+}
+
+.sous-deroulant:hover > a .basketball-icon-nav-sous-deroulant {
+    animation: rotate 1s linear forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style supplémentaire pour le survol */
+nav a:hover {
+    background-color: #ff5733;
+}
+
+/* Section Accueil (Hero) */
+.hero {
+    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    color: #fff; /* Couleur du texte en blanc */
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour améliorer la lisibilité */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff; /* Assurez-vous que le titre est blanc */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff; /* Assurez-vous que le texte est blanc */
+}
+
+/* Sections */
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
