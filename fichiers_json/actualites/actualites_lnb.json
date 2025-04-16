@@ -1,0 +1,12 @@
+[
+  {
+      "id": 1,
+      "nom": "LNB",
+      "titre": "LNB : Le championnat reprend",
+      "contenu": "La Ligue Nationale de Basket reprend avec des matchs intenses.",
+      "image": "../../images/image_lnb/lnb_reprise.avif",
+      "date": "2025-03-29",
+      "ligue": "lnb",
+      "link": "https://example.com/lnb-reprise"
+  }
+]

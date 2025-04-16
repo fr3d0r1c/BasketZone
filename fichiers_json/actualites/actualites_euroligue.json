@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "nom": "Euroligue",
+        "titre": "Les playoffs Euroligue commencent",
+        "contenu": "La phase des playoffs commence enfin, avec des matchs explosifs entre les meilleurs clubs européens...",
+        "image": "../../images/image_euroligue/playoffs_euroligue.avif",
+        "date": "2025-04-01",
+        "ligue": "euroligue",
+        "link": "https://www.basketzone.com/articles/playoffs-euroligue"
+    }
+]

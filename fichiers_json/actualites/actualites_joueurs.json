@@ -1,0 +1,103 @@
+[
+    {
+        "id": 1,
+        "nom": "LeBron James",
+        "title": "LeBron James brille lors du dernier match",
+        "description": "LeBron James a été incroyable lors du dernier match contre les Lakers, marquant 30 points et prenant 10 rebonds...",
+        "image": "lebron_james.avif",
+        "date": "2025-04-05",
+        "ligue": "nba",
+        "link": "https://exemple.com/lebron-james-brille"
+    },
+    {
+        "id": 2,
+        "nom": "Giannis Antetokounmpo",
+        "title": "Giannis mène les Bucks vers la victoire",
+        "description": "Giannis Antetokounmpo a montré une forme exceptionnelle dans le dernier match des Bucks contre les Celtics...",
+        "image": "giannis.webp",
+        "date": "2025-04-06",
+        "ligue": "nba",
+        "link": "https://exemple.com/giannis-victoire"
+    },
+    {
+        "id": 3,
+        "nom": "Kevin Durant",
+        "title": "Durant s'illustre avec 40 points",
+        "description": "Kevin Durant a réalisé une performance exceptionnelle avec 40 points et 12 rebonds dans la victoire des Suns contre les Warriors...",
+        "image": "kevin_durant.jpg",
+        "date": "2025-04-05",
+        "ligue": "nba",
+        "link": "https://exemple.com/durant-40-points"
+    },
+    {
+        "id": 4,
+        "nom": "Vassilis Spanoulis",
+        "title": "Spanoulis mène l'Olympiakos à une victoire décisive",
+        "description": "Vassilis Spanoulis a marqué 18 points et distribué 7 passes décisives pour aider l'Olympiakos à s'imposer en Euroligue contre le CSKA Moscou...",
+        "image": "vassilis_spanoulis.jpg",
+        "date": "2025-04-04",
+        "ligue": "euroligue",
+        "link": "https://exemple.com/spanoulis-victoire-olympiakos"
+    },
+    {
+        "id": 5,
+        "nom": "Sergio Llull",
+        "title": "Llull propulse le Real Madrid vers la victoire",
+        "description": "Sergio Llull a été impressionnant avec 25 points et 6 passes décisives dans la victoire du Real Madrid contre le FC Barcelone en Liga ACB...",
+        "image": "sergio_llull.jpg",
+        "date": "2025-04-05",
+        "ligue": "euroligue",
+        "link": "https://exemple.com/lull-real-madrid-victoire"
+    },
+    {
+        "id": 6,
+        "nom": "Andrew Gaze",
+        "title": "Gaze enflamme la NBL avec 38 points",
+        "description": "Andrew Gaze a inscrit 38 points lors du dernier match de Melbourne United contre les Sydney Kings en NBL...",
+        "image": "andrew_gaze.jpg",
+        "date": "2025-04-06",
+        "ligue": "nbl",
+        "link": "https://exemple.com/andrew-gaze-nbl"
+    },
+    {
+        "id": 7,
+        "nom": "Nando De Colo",
+        "title": "De Colo brille en LNB avec 28 points",
+        "description": "Nando De Colo a montré son talent avec 28 points et 7 passes décisives pour le CSKA Moscou contre le Limoges CSP en LNB...",
+        "image": "nando_de_colo.jpg",
+        "date": "2025-04-04",
+        "ligue": "lnb",
+        "link": "https://exemple.com/nando-de-colo-lnb"
+    },
+    {
+        "id": 8,
+        "nom": "MarShon Brooks",
+        "title": "Brooks impressionne en CBA avec 32 points",
+        "description": "MarShon Brooks a été brillant avec 32 points et 8 rebonds dans la victoire des Guangdong Southern Tigers contre les Beijing Ducks en CBA...",
+        "image": "marshon_brooks.jpg",
+        "date": "2025-04-03",
+        "ligue": "cba",
+        "link": "https://exemple.com/marshon-brooks-cba"
+    },
+    {
+        "id": 9,
+        "nom": "Frank Ntilikina",
+        "title": "Ntilikina excelle en LNB avec une défense solide",
+        "description": "Frank Ntilikina a marqué 15 points et réalisé 5 interceptions dans la victoire de Strasbourg contre Monaco en LNB...",
+        "image": "frank_ntilikina.jpg",
+        "date": "2025-04-05",
+        "ligue": "lnb",
+        "link": "https://exemple.com/frank-ntilikina-lnb"
+    },
+    {
+        "id": 10,
+        "nom": "Cedi Osman",
+        "title": "Osman mène les Anadolu Efes vers la victoire",
+        "description": "Cedi Osman a marqué 22 points et pris 9 rebonds pour guider les Anadolu Efes à une victoire en Euroligue contre le Panathinaïkos...",
+        "image": "cedi_osman.jpg",
+        "date": "2025-04-06",
+        "ligue": "euroligue",
+        "link": "https://exemple.com/cedi-osman-victoire-anadolu-efes"
+    }
+  ]
+  

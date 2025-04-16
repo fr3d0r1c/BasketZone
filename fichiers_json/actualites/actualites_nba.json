@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "nom": "NBA",
+        "titre": "Le match des All-Star de cette année : Un événement épique",
+        "contenu": "Les stars de la NBA se sont affrontées dans un match spectaculaire qui a attiré des millions de fans.",
+        "image": "../../images/image_nba/all_star_2025.avif",
+        "date": "2025-04-06",
+        "ligue": "nba",
+        "link": "https://exemple.com/article1"
+    },
+    {
+        "id": 2,
+        "nom": "NBA",
+        "titre": "Le retour triomphal de LeBron James après sa blessure",
+        "contenu": "LeBron James a fait son retour après une blessure et a mené son équipe vers une victoire cruciale.",
+        "image": "../../images/image_nba/lebron_retour.avif",
+        "date": "2025-04-05",
+        "ligue": "nba",
+        "link": "https://exemple.com/article2"
+    },
+    {
+        "id": 3,
+        "nom": "NBA",
+        "titre": "Les Lakers dominent les Warriors dans un match décisif",
+        "contenu": "Dans un match très attendu, les Lakers ont largement battu les Warriors grâce à un jeu collectif exceptionnel.",
+        "image": "../../images/image_nba/lakers_vs_warriors.avif",
+        "date": "2025-04-04",
+        "ligue": "nba",
+        "link": "https://exemple.com/article3"
+    }
+]
