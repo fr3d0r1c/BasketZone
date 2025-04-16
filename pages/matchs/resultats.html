@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Résultats - BasketZone</title>
+        <link rel="stylesheet" href="../../styles.css">
+        <link rel="stylesheet" href="../../css/matchs/styles_resultats.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h1>BasketZ<span>&#x1F3C0;</span>ne</h1>
+                    <p>Le mode du basket à portée de main</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html"><span class="basketball-icon-nav">&#x1F3C0;</span></a></li>
+                    <li class="deroulant">
+                        <a href="#">Actualités <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li><a href="../actualites/actualites_joueurs.html">Actualités Joueurs</a></li>
+                            <li class="sous-deroulant">
+                                <a href="#">Actualités Ligues <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                                <ul class="sous-sous">
+                                    <li><a href="../actualites/actualites_nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                                    <li><a href="../actualites/actualites_euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                    <li><a href="../actualites/actualites_lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <a href="#">Statistiques <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li class="sous-deroulant">
+                                <a href="#">Statistiques Joueurs <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                                <ul class="sous-sous">
+                                    <li><a href="../statistiques/joueurs/stats-joueurs-nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                                    <li><a href="../statistiques/joueurs/stats-joueurs-euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                    <li><a href="../statistiques/joueurs/stats-joueurs-lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                                </ul>
+                            </li>
+                            <li class="sous-deroulant">
+                                <a href="#">Statistiuqes Equipes <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                                <ul class="sous-sous">
+                                    <li><a href="../statistiques/equipe/stats-equipes-nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</li>
+                                    <li><a href="../statistiques/equipe/stats-equipes-euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                    <li><a href="../statistiques/equipe/stats-equipes-lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <a href="#">Classement <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li><a href="../classement/classement_nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                            <li><a href="../classement/classement_euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                            <li><a href="../classement/classement_lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <a href="#">Matchs <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li><a href="prochains-matchs.html">Matchs à venir</a></li>
+                            <li><a href="#">Derniers Résultats</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        
+        <section id="resultats">
+            <h2>Résultats des matchs</h2>
+
+            <!-- Barre de filtrage pour les ligues -->
+            <div id="filter">
+                <label for="league-filter">Filtrer par ligue:</label>
+                <select id="league-filter">
+                    <option value="">Toutes les ligues</option>
+                    <option value="nba">NBA</option>
+                    <option value="euroleague">EuroLeague</option>
+                    <option value="lnb">LNB</option>
+                    <option value="ncaa">NCAA</option>
+                    <option value="wnba">WNBA</option>
+                </select>
+            </div>
+
+            <div class="resultats-container" id="resultats-container">
+                <!-- Les cartes de matchs seront insérées ici par JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Fenêtre modale pour afficher les détails du match -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-title"></div>
+                <div id="modal-details"></div>
+            </div>
+        </div>        
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 BasketZone - Tout Droit réservés.</p>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../../scripts/Matchs/script_resultats.js"></script>
+
+    </body>
+</html>
