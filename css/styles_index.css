@@ -1,0 +1,288 @@
+/* Container pour les deux conférences NBA */
+.conference-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacement entre les conférences */
+    margin-top: 30px;
+}
+
+/* Styles pour chaque conférence */
+.conference {
+    flex: 1; /* Chaque section prendra une largeur égale */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre de la conférence */
+.conference h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Tables des classements */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    font-size: 1.1rem;
+}
+
+td {
+    font-size: 1rem;
+    color: #555;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #ff5733;
+    color: white;
+}
+
+/* Animation d'apparition des tableaux */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Section des Actualités */
+#actualites-recents {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+#actualites-recents h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Sous-sections pour les actualités (joueurs et ligues) */
+#actualites-joueurs-recents,
+#actualites-ligues-recents {
+    margin-bottom: 40px;
+}
+
+/* Titre de chaque sous-section */
+#actualites-joueurs-recents h3,
+#actualites-ligues-recents h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Conteneur des articles */
+#article-joueurs,
+#article-nba,
+#article-euroligue,
+#article-lnb {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#article-joueurs:hover,
+#article-nba:hover,
+#article-euroligue:hover,
+#article-lnb:hover {
+    transform: scale(1.05);
+}
+
+/* Titre de l'article */
+#article-joueurs h4,
+#article-nba h4,
+#article-euroligue h4,
+#article-lnb h4 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Description de l'article */
+#article-joueurs p,
+#article-nba p,
+#article-euroligue p,
+#article-lnb p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Date de l'article */
+#article-joueurs p strong,
+#article-nba p strong,
+#article-euroligue p strong,
+#article-lnb p strong {
+    font-weight: bold;
+}
+
+/* Image de l'article */
+#article-joueurs img,
+#article-nba img,
+#article-euroligue img,
+#article-lnb img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lien vers l'article complet */
+#article-joueurs a,
+#article-nba a,
+#article-euroligue a,
+#article-lnb a {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #ff5733;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#article-joueurs a:hover,
+#article-nba a:hover,
+#article-euroligue a:hover,
+#article-lnb a:hover {
+    color: #c43e00;
+}
+
+#calendar {
+    font-family: 'Roboto', sans-serif; /* Utilisez la même police que le reste de votre site */
+    max-width: 900px; /* Ajustez la largeur maximale selon vos besoins */
+    margin: 20px auto; /* Centrez le calendrier sur la page */
+    background-color: #fff; /* Fond blanc */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.fc-header-toolbar {
+    padding: 10px;
+    background-color: #f0f0f0; /* Fond gris clair pour l'en-tête */
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.fc-daygrid-day-top {
+    font-weight: bold; /* Jours de la semaine en gras */
+}
+
+.fc-daygrid-event {
+    background-color: #007bff; /* Couleur de fond des événements */
+    border-color: #007bff;
+    color: #fff; /* Couleur du texte des événements */
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+
+.fc-daygrid-event:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+    border-color: #0056b3;
+}
+
+.fc-col-header-cell {
+    background-color: #f8f8f8; /* Couleur de fond des en-têtes de jour */
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.fc-daygrid-day-number {
+    padding: 5px;
+    text-align: right;
+}
+
+.fc-daygrid-day-frame {
+    border: 1px solid #eee; /* Bordure légère pour les cellules de jour */
+}
+
+.fc-popover {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.fc-popover-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Conteneur des classements */
+#statistiques .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Chaque ligue */
+.ligue {
+    flex: 1 1 300px; /* largeur minimum 300px */
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Pour éviter que ça déborde */
+.ligue table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.ligue h3 {
+    text-align: center;
+    color: #162a3b;
+}
+
+/* Optionnel : style des titres et cellules */
+.ligue th, .ligue td {
+    text-align: center;
+    padding: 8px;
+}
+
+.ligue th {
+    background-color: #c11515;
+    color: white;
+}
+
+.ligue tr:nth-child(even) {
+    background-color: #eee;
+}

@@ -71,12 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();  // On convertit en JSON
             })
             .then(data => {
-                // Vérification de la clé "articles" dans le JSON
-                if (data && data.articles) {
-                    return data.articles;  // Retourner uniquement les articles
-                } else {
-                    throw new Error('Les données ne contiennent pas la clé "articles"');
-                }
+                console.log('Données chargées :', data);  // Vérifier les données
+                return Array.isArray(data) ? data : [data];  // Assurer que c'est un tableau
             })
             .catch(error => {
                 console.error('Erreur lors du chargement des données :', error);
@@ -94,6 +90,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                 }
 
+                // Vérification des dates et conversion si nécessaire
+                articles.forEach(article => {
+                    // Log pour vérifier la date
+                    console.log('Date de l\'article :', article.date);
+
+                    // Vérifier si la date est valide, si pas on la formate
+                    if (isNaN(new Date(article.date))) {
+                        console.warn('Date invalide pour l\'article :', article);
+                    }
+                });
+
                 // Trier les articles par date (du plus récent au plus ancien)
                 articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
@@ -101,22 +108,138 @@ document.addEventListener('DOMContentLoaded', function() {
                 const articleRecent = articles[0];
                 const section = document.getElementById(idSection);
 
+                // Afficher les informations de l'article
                 section.innerHTML = `
-                    <h4>${articleRecent.title}</h4>
-                    <p>${articleRecent.description}</p>
+                    <h4>${articleRecent.titre}</h4>
+                    <p>${articleRecent.contenu}</p>
                     <p><strong>Date:</strong> ${articleRecent.date}</p>
-                    <img src="${articleRecent.image}" alt="${articleRecent.title}" />
-                    <a href="${articleRecent.link}" target="_blank">Lire l'article complet</a>
+                    ${articleRecent.image ? `<img src="${articleRecent.image}" alt="${articleRecent.titre}" />` : ''}
                 `;
             })
             .catch(error => {
                 console.error('Erreur lors de la récupération des articles :', error);
+                const section = document.getElementById(idSection);
+                section.innerHTML = "<p>Erreur lors de l'affichage de l'article.</p>";
             });
     }
 
     // Charger et afficher l'article le plus récent pour chaque catégorie
-    afficherArticleRecent('article-joueurs', 'fichiers_json/Actualités/actualites_joueurs.json');
-    afficherArticleRecent('article-nba', 'fichiers_json/Actualités/actualites_nba.json');
-    afficherArticleRecent('article-euroligue', 'fichiers_json/Actualités/actualites_euroligue.json');
-    afficherArticleRecent('article-lnb', 'fichiers_json/Actualités/actualites_lnb.json');
+    afficherArticleRecent('article-joueurs', 'fichiers_json/actualites/actualites_joueurs.json');
+    afficherArticleRecent('article-nba', 'fichiers_json/actualites/actualites_nba.json');
+    afficherArticleRecent('article-euroligue', 'fichiers_json/actualites/actualites_euroligue.json');
+    afficherArticleRecent('article-lnb', 'fichiers_json/actualites/actualites_lnb.json');
+});
+
+
+
+async function fetchStats(ligue, file, idPrefix) {
+    const response = await fetch(file);
+    const data = await response.json();
+
+    // Convertir les strings en float (utile pour Euroligue/LNB)
+    data.forEach(p => {
+        p.PTS = parseFloat(p.PTS);
+        p.AST = parseFloat(p.AST);
+        p.TRB = parseFloat(p.REB || p.TRB); // selon la structure
+    });
+
+    // Fonctions utilitaires
+    const top5 = (stat) => data
+        .filter(p => !isNaN(p[stat]))
+        .sort((a, b) => b[stat] - a[stat])
+        .slice(0, 5);
+
+    const fillTable = (stat, tableId) => {
+        const top = top5(stat);
+        const tbody = document.getElementById(tableId);
+        top.forEach((p, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${p.Player}</td>
+                <td>${p.Team}</td>
+                <td>${p[stat]}</td>
+            `;
+            tbody.appendChild(row);
+        });
+    };
+
+    fillTable('PTS', `${idPrefix}-points`);
+    fillTable('AST', `${idPrefix}-passes`);
+    fillTable('TRB', `${idPrefix}-rebonds`);
+}
+
+// Appels pour chaque ligue
+fetchStats("NBA", "fichiers_json/statistiques/joueurs/stats_joueurs_nba.json", "nba");
+fetchStats("Euroligue", "fichiers_json/statistiques/joueurs/stats_joueurs_euroleague.json", "euroligue");
+fetchStats("LNB", "fichiers_json/statistiques/joueurs/stats_joueurs_lnb.json", "lnb");
+
+const leagueColors = {
+    nba: '#FDB927',
+    euroleague: '#e53935',
+    lnb: '#1E88E5',
+    ncaa: '#43A047',
+    wnba: '#FF6F00'
+};
+
+Promise.all([
+    fetch('fichiers_json/matchs/resultats.json').then(res => res.json()),
+    fetch('fichiers_json/matchs/prochains_matchs.json').then(res => res.json())
+])
+.then(([resultats, matchsAvenir]) => {
+    const events = [];
+
+    // 🔴 Résultats terminés
+    resultats.forEach(match => {
+        const [day, month, year] = match.date.split('/');
+        const isoDate = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+
+        events.push({
+            title: `${match.team1} ${match.score} ${match.team2}`,
+            start: isoDate,
+            color: leagueColors[match.league] || '#9E9E9E',
+            extendedProps: {
+                type: 'resultat',
+                mvp: match.mvp,
+                video: match.video
+            }
+        });
+    });
+
+    // 🔵 Matchs à venir
+    Object.entries(matchsAvenir).forEach(([league, matchs]) => {
+        matchs.forEach(match => {
+            events.push({
+                title: `${match.equipeA} vs ${match.equipeB}`,
+                start: `${match.date}T${match.heure}`,
+                color: leagueColors[league] || '#9E9E9E',
+                extendedProps: {
+                    type: 'avenir',
+                    statistiques: match.statistiques,
+                    joueurs_a_suivre: match.joueurs_a_suivre,
+                    confrontations: match.dernières_confrontations
+                }
+            });
+        });
+    });
+
+    const calendarEl = document.getElementById('calendar');
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'fr',
+        eventSources: [
+            { events: events }
+        ],
+        eventClick: function(info) {
+            const props = info.event.extendedProps;
+
+            if (props.type === 'resultat') {
+                alert(`🎯 Match terminé\nMVP : ${props.mvp}\nVidéo : ${props.video}`);
+            } else if (props.type === 'avenir') {
+                alert(`📅 Match à venir\nJoueurs à suivre :\n${Object.entries(props.joueurs_a_suivre).map(([equipe, joueurs]) => `- ${equipe} : ${joueurs.join(', ')}`).join('\n')}`);
+            }
+        }
+    });
+
+    calendar.render();
 });
