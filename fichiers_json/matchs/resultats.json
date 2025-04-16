@@ -1,0 +1,282 @@
+[
+    {
+        "id": 1,
+        "team1": "Lakers",
+        "team1Logo": "../../images/logo_equipe/logo_lakers.png",
+        "team2": "Warriors",
+        "team2Logo": "../../images/logo_equipe/logo_warriors.png",
+        "date": "07/02/2025",
+        "league": "nba",
+        "venue": "Staples Center, Los Angeles",
+        "score": "120 - 112",
+        "mvp": "LeBron James",
+        "statsTeam1": {
+            "points": 120,
+            "assists": 28,
+            "rebounds": 46
+        },
+        "statsTeam2": {
+            "points": 112,
+            "assists": 22,
+            "rebonds": 40
+        },
+        "mvpStats": {
+            "points": 35,
+            "assists": 8,
+            "rebounds": 10
+        },
+        "video": "https://www.youtube.com/watch?v=example1"
+    },
+    {
+        "id": 2,
+        "team1": "Real Madrid",
+        "team1Logo": "../../images/logo_equipe/logo_real.png",
+        "team2": "Barcelona",
+        "team2Logo": "../../images/logo_equipe/logo_barca.png",
+        "date": "27/02/2025",
+        "league": "euroleague",
+        "venue": "WiZink Center, Madrid",
+        "score": "96 - 91",
+        "mvp": "Sergio Llull",
+        "statsTeam1": {
+            "points": 96,
+            "assists": 24,
+            "rebounds": 30
+        },
+        "statsTeam2": {
+            "points": 91,
+            "assists": 19,
+            "rebonds": 33
+        },
+        "mvpStats": {
+            "points": 27,
+            "assists": 6,
+            "rebounds": 4
+        },
+        "video": "https://www.youtube.com/watch?v=example2"
+    },
+    {
+        "id": 3,
+        "team1": "ASVEL",
+        "team1Logo": "../../images/logo_equipe/logo_asvel.png",
+        "team2": "Monaco",
+        "team2Logo": "../../images/logo_equipe/logo_as_monaco.png",
+        "date": "06/10/2024",
+        "league": "lnb",
+        "venue": "Astroballe, Villeurbanne",
+        "score": "88 - 71",
+        "mvp": "Guerschon Yabusele",
+        "statsTeam1": {
+            "points": 88,
+            "assists": 22,
+            "rebounds": 39
+        },
+        "statsTeam2": {
+            "points": 71,
+            "assists": 18,
+            "rebonds": 31
+        },
+        "mvpStats": {
+            "points": 23,
+            "assists": 7,
+            "rebounds": 5
+        },
+        "video": "https://www.youtube.com/watch?v=example3"
+    },
+    {
+        "id": 4,
+        "team1": "Duke",
+        "team1Logo": "../../images/logo_equipe/logo_duke.png",
+        "team2": "North Carolina",
+        "team2Logo": "../../images/logo_equipe/logo_unc.png",
+        "date": "15/03/2025",
+        "league": "ncaa",
+        "venue": "Cameron Indoor Stadium, Durham",
+        "score": "78 - 74",
+        "mvp": "Zion Williamson",
+        "statsTeam1": {
+            "points": 78,
+            "assists": 14,
+            "rebounds": 35
+        },
+        "statsTeam2": {
+            "points": 74,
+            "assists": 18,
+            "rebonds": 30
+        },
+        "mvpStats": {
+            "points": 31,
+            "assists": 5,
+            "rebounds": 8
+        },
+        "video": "https://www.youtube.com/watch?v=example4"
+    },
+    {
+        "id": 5,
+        "team1": "Chicago Sky",
+        "team1Logo": "../../images/logo_equipe/logo_chicago_sky.png",
+        "team2": "Seattle Storm",
+        "team2Logo": "../../images/logo_equipe/logo_seattle_storm.png",
+        "date": "20/04/2025",
+        "league": "wnba",
+        "venue": "Wintrust Arena, Chicago",
+        "score": "95 - 89",
+        "mvp": "Candace Parker",
+        "statsTeam1": {
+            "points": 95,
+            "assists": 21,
+            "rebounds": 40
+        },
+        "statsTeam2": {
+            "points": 89,
+            "assists": 15,
+            "rebonds": 37
+        },
+        "mvpStats": {
+            "points": 28,
+            "assists": 7,
+            "rebounds": 12
+        },
+        "video": "https://www.youtube.com/watch?v=example5"
+    },
+    {
+        "id": 6,
+        "team1": "Bayern Munich",
+        "team1Logo": "../../images/logo_equipe/logo_bayern.jpg",
+        "team2": "Fenerbahçe",
+        "team2Logo": "../../images/logo_equipe/logo_fenerbahce.png",
+        "date": "10/03/2025",
+        "league": "euroleague",
+        "venue": "Audi Dome, Munich",
+        "score": "84 - 76",
+        "mvp": "Vasilije Micić",
+        "statsTeam1": {
+            "points": 84,
+            "assists": 22,
+            "rebounds": 33
+        },
+        "statsTeam2": {
+            "points": 76,
+            "assists": 18,
+            "rebonds": 30
+        },
+        "mvpStats": {
+            "points": 24,
+            "assists": 9,
+            "rebounds": 7
+        },
+        "video": "https://www.youtube.com/watch?v=example6"
+    },
+    {
+        "id": 7,
+        "team1": "Maccabi Tel Aviv",
+        "team1Logo": "../../images/logo_equipe/logo_maccabi.png",
+        "team2": "CSKA Moscow",
+        "team2Logo": "../../images/logo_equipe/logo_cska.jpg",
+        "date": "01/04/2025",
+        "league": "euroleague",
+        "venue": "Menora Mivtachim Arena, Tel Aviv",
+        "score": "99 - 92",
+        "mvp": "Scottie Wilbekin",
+        "statsTeam1": {
+            "points": 99,
+            "assists": 26,
+            "rebounds": 40
+        },
+        "statsTeam2": {
+            "points": 92,
+            "assists": 19,
+            "rebonds": 35
+        },
+        "mvpStats": {
+            "points": 30,
+            "assists": 8,
+            "rebounds": 5
+        },
+        "video": "https://www.youtube.com/watch?v=example7"
+    },
+    {
+        "id": 8,
+        "team1": "Paris Basketball",
+        "team1Logo": "../../images/logo_equipe/logo_paris_basketball.jpg",
+        "team2": "Le Mans",
+        "team2Logo": "../../images/logo_equipe/logo_le_mans.png",
+        "date": "28/02/2025",
+        "league": "lnb",
+        "venue": "AccorHotels Arena, Paris",
+        "score": "92 - 85",
+        "mvp": "Jamal Shuler",
+        "statsTeam1": {
+            "points": 92,
+            "assists": 20,
+            "rebounds": 34
+        },
+        "statsTeam2": {
+            "points": 85,
+            "assists": 17,
+            "rebonds": 32
+        },
+        "mvpStats": {
+            "points": 28,
+            "assists": 6,
+            "rebounds": 4
+        },
+        "video": "https://www.youtube.com/watch?v=example8"
+    },
+    {
+        "id": 9,
+        "team1": "Kansas Jayhawks",
+        "team1Logo": "../../images/logo_equipe/logo_kansas.png",
+        "team2": "Kentucky Wildcats",
+        "team2Logo": "../../images/logo_equipe/logo_kentucky.png",
+        "date": "12/02/2025",
+        "league": "ncaa",
+        "venue": "Allen Fieldhouse, Lawrence",
+        "score": "83 - 75",
+        "mvp": "Jalen Wilson",
+        "statsTeam1": {
+            "points": 83,
+            "assists": 21,
+            "rebounds": 36
+        },
+        "statsTeam2": {
+            "points": 75,
+            "assists": 16,
+            "rebonds": 34
+        },
+        "mvpStats": {
+            "points": 29,
+            "assists": 4,
+            "rebounds": 10
+        },
+        "video": "https://www.youtube.com/watch?v=example9"
+    },
+    {
+        "id": 10,
+        "team1": "Los Angeles Sparks",
+        "team1Logo": "../../images/logo_equipe/logo_la_sparks.png",
+        "team2": "Phoenix Mercury",
+        "team2Logo": "../../images/logo_equipe/logo_phoenix_mercury.png",
+        "date": "18/05/2025",
+        "league": "wnba",
+        "venue": "Staples Center, Los Angeles",
+        "score": "88 - 80",
+        "mvp": "Nneka Ogwumike",
+        "statsTeam1": {
+            "points": 88,
+            "assists": 18,
+            "rebounds": 34
+        },
+        "statsTeam2": {
+            "points": 80,
+            "assists": 14,
+            "rebonds": 32
+        },
+        "mvpStats": {
+            "points": 24,
+            "assists": 5,
+            "rebounds": 8
+        },
+        "video": "https://www.youtube.com/watch?v=example10"
+    }
+]

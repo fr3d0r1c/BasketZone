@@ -1,0 +1,122 @@
+{
+    "nba": [
+        {
+            "equipeA": "Lakers",
+            "equipeB": "Celtics",
+            "date": "2025-04-10",
+            "heure": "20:00",
+            "statistiques": {
+                "equipeA": {
+                    "points_marges": 115,
+                    "points_concedes": 107,
+                    "rebonds": 45,
+                    "passes": 25
+                },
+                "equipeB": {
+                    "points_marges": 108,
+                    "points_concedes": 110,
+                    "rebonds": 40,
+                    "passes": 30
+                }
+            },
+            "dernières_confrontations": [
+                "2024-12-15 : Lakers 102 - 95 Celtics",
+                "2024-10-20 : Celtics 108 - 110 Lakers"
+            ],
+            "5_derniers_matchs": {
+                "equipeA": [
+                    {"date": "2025-04-05", "résultat": "victoire", "score": "112-104"},
+                    {"date": "2025-04-02", "résultat": "défaite", "score": "100-108"}
+                ],
+                "equipeB": [
+                    {"date": "2025-04-06", "résultat": "victoire", "score": "110-99"},
+                    {"date": "2025-04-04", "résultat": "victoire", "score": "115-107"}
+                ]
+            },
+            "joueurs_a_suivre": {
+                "equipeA": ["LeBron James", "Anthony Davis"],
+                "equipeB": ["Jayson Tatum", "Jaylen Brown"]
+            }
+        }
+    ],
+    "euroligue": [
+        {
+            "equipeA": "Real Madrid",
+            "equipeB": "Fenerbahçe",
+            "date": "2025-04-12",
+            "heure": "21:00",
+            "statistiques": {
+                "equipeA": {
+                    "points_marges": 88,
+                    "points_concedes": 82,
+                    "rebonds": 35,
+                    "passes": 18
+                },
+                "equipeB": {
+                    "points_marges": 85,
+                    "points_concedes": 90,
+                    "rebonds": 38,
+                    "passes": 20
+                }
+            },
+            "dernières_confrontations": [
+                "2024-11-22 : Real Madrid 95 - 90 Fenerbahçe",
+                "2024-10-15 : Fenerbahçe 89 - 85 Real Madrid"
+            ],
+            "5_derniers_matchs": {
+                "equipeA": [
+                    {"date": "2025-04-08", "résultat": "victoire", "score": "98-92"},
+                    {"date": "2025-04-05", "résultat": "défaite", "score": "76-81"}
+                ],
+                "equipeB": [
+                    {"date": "2025-04-09", "résultat": "victoire", "score": "95-88"},
+                    {"date": "2025-04-03", "résultat": "défaite", "score": "80-85"}
+                ]
+            },
+            "joueurs_a_suivre": {
+                "equipeA": ["Sergio Llull", "Facundo Campazzo"],
+                "equipeB": ["Jan Vesely", "Nando de Colo"]
+            }
+        }
+    ],
+    "lnb": [
+        {
+            "equipeA": "ASVEL",
+            "equipeB": "Monaco",
+            "date": "2025-04-15",
+            "heure": "20:30",
+            "statistiques": {
+                "equipeA": {
+                    "points_marges": 95,
+                    "points_concedes": 85,
+                    "rebonds": 40,
+                    "passes": 22
+                },
+                "equipeB": {
+                    "points_marges": 90,
+                    "points_concedes": 88,
+                    "rebonds": 38,
+                    "passes": 24
+                }
+            },
+            "dernières_confrontations": [
+                "2024-12-10 : ASVEL 90 - 88 Monaco",
+                "2024-10-25 : Monaco 92 - 84 ASVEL"
+            ],
+            "5_derniers_matchs": {
+                "equipeA": [
+                    {"date": "2025-04-06", "résultat": "victoire", "score": "102-95"},
+                    {"date": "2025-04-03", "résultat": "défaite", "score": "88-90"}
+                ],
+                "equipeB": [
+                    {"date": "2025-04-07", "résultat": "victoire", "score": "98-90"},
+                    {"date": "2025-04-01", "résultat": "victoire", "score": "100-92"}
+                ]
+            },
+            "joueurs_a_suivre": {
+                "equipeA": ["Nando de Colo", "Moustapha Fall"],
+                "equipeB": ["Mike James", "Donta Hall"]
+            }
+        }
+    ]
+}
