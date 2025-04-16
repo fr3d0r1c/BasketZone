@@ -1,0 +1,94 @@
+/* Style général du tableau */
+#stats-joueurs {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Style des en-têtes du tableau */
+#stats-joueurs th {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+/* Effet de survol pour les en-têtes */
+#stats-joueurs th:hover {
+    background-color: #0056b3;
+}
+
+/* Style des cellules du tableau */
+#stats-joueurs td {
+    background-color: #f9f9f9;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 1em;
+}
+
+/* Effet de survol sur les lignes du tableau */
+#stats-joueurs tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Style pour la première colonne (#) qui contient les positions */
+#stats-joueurs td:first-child {
+    font-weight: bold;
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+/* Mettre en surbrillance les colonnes triées */
+#stats-joueurs th.sorted-asc, #stats-joueurs th.sorted-desc {
+    background-color: #0056b3;
+}
+
+/* Style de la barre de filtrage (sélecteur) */
+.filter-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-container label {
+    font-size: 1.1em;
+    margin-right: 10px;
+    color: #555;
+}
+
+.filter-container select {
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-container select:hover {
+    border-color: #007BFF;
+}
+
+/* Responsivité - Adaptez le tableau aux petits écrans */
+@media screen and (max-width: 768px) {
+    #stats-joueurs {
+        font-size: 0.9em;
+    }
+
+    .filter-container {
+        margin-bottom: 20px;
+    }
+
+    select {
+        width: 100%;
+        padding: 12px;
+    }
+}

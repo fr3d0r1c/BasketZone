@@ -1,0 +1,49 @@
+/* Tableau de statistiques */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-size: 0.95em;
+}
+
+thead {
+    background-color: #162a3b;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 12px 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+tbody tr:hover {
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+/* Pour les images/logo dans le tableau, si tu en ajoutes */
+td img {
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 0.85em;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}

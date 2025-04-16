@@ -1,0 +1,85 @@
+/* Style du tableau */
+#lnb-ranking {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#lnb-ranking th, #lnb-ranking td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#lnb-ranking th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+#lnb-ranking tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#lnb-ranking tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+#lnb-ranking td {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Style pour les en-têtes */
+#lnb-ranking th[colspan="3"],
+#lnb-ranking th[colspan="2"],
+#lnb-ranking th[colspan="1"] {
+    text-align: center;
+}
+
+#lnb-ranking td:nth-child(1) {
+    font-weight: bold;
+}
+
+#lnb-ranking td:nth-child(2) {
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Style pour les positions */
+#lnb-ranking td:nth-child(1) {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Style des colonnes */
+#lnb-ranking td:nth-child(3),
+#lnb-ranking td:nth-child(4),
+#lnb-ranking td:nth-child(5),
+#lnb-ranking td:nth-child(6),
+#lnb-ranking td:nth-child(7),
+#lnb-ranking td:nth-child(8),
+#lnb-ranking td:nth-child(9),
+#lnb-ranking td:nth-child(10),
+#lnb-ranking td:nth-child(11),
+#lnb-ranking td:nth-child(12),
+#lnb-ranking td:nth-child(13),
+#lnb-ranking td:nth-child(14) {
+    background-color: #fff;
+}
+
+/* Appliquer des styles supplémentaires aux titres */
+#classement-lnb h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+

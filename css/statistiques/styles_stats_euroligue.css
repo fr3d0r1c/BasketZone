@@ -1,0 +1,82 @@
+/* Style général de la section */
+.section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Titre de section */
+.section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #162a3b; /* bleu BasketZone */
+}
+
+/* Table style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #c11515; /* rouge BasketZone */
+    color: white;
+}
+
+thead th {
+    padding: 12px 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-weight: bold;
+}
+
+tbody td {
+    padding: 10px 6px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+/* Zébrage des lignes */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effet */
+tbody tr:hover {
+    background-color: #ffecec;
+}
+
+/* Logo équipe (si tu les ajoutes plus tard) */
+td img.logo {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Responsive si tu veux ajouter plus tard */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead {
+        display: none;
+    }
+    tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+}

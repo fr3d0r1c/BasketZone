@@ -1,0 +1,76 @@
+/* Section spécifique pour les statistiques LNB */
+#statistiques-equipes-lnb {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+#statistiques-equipes-lnb h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #162a3b; /* bleu SDIS */
+}
+
+/* Table styling */
+#statistiques-equipes-lnb table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#statistiques-equipes-lnb th,
+#statistiques-equipes-lnb td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#statistiques-equipes-lnb th {
+    background-color: #C11515; /* rouge SDIS */
+    color: white;
+    font-weight: bold;
+}
+
+#statistiques-equipes-lnb tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#statistiques-equipes-lnb tr:hover {
+    background-color: #e9e9e9;
+}
+
+/* Responsive handling */
+@media screen and (max-width: 768px) {
+    #statistiques-equipes-lnb table,
+    #statistiques-equipes-lnb thead,
+    #statistiques-equipes-lnb tbody,
+    #statistiques-equipes-lnb th,
+    #statistiques-equipes-lnb td,
+    #statistiques-equipes-lnb tr {
+        display: block;
+    }
+
+    #statistiques-equipes-lnb thead tr {
+        display: none;
+    }
+
+    #statistiques-equipes-lnb td {
+        padding-left: 50%;
+        position: relative;
+        text-align: left;
+    }
+
+    #statistiques-equipes-lnb td::before {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #333;
+        content: attr(data-label);
+    }
+}

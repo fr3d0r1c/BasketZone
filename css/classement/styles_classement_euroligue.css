@@ -1,0 +1,66 @@
+/* Section de classement */
+#classement-euroligue {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+#classement-euroligue .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#classement-euroligue h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#classement-euroligue p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Tableau du classement */
+.classement {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.classement th, .classement td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.classement th {
+    background-color: #f39c12;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.classement tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.classement tr:hover {
+    background-color: #f1f1f1;
+}
+
+.classement td a {
+    text-decoration: none;
+    color: #333;
+}
+
+.classement td a:hover {
+    color: #f39c12;
+}
+
+/* Résponsivité */
+@media screen and (max-width: 768px) {
+    .classement th, .classement td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}

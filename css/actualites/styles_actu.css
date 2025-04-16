@@ -1,0 +1,96 @@
+/* SECTION ACTUALITÉS */
+#actualites {
+    margin: 40px 0;
+}
+
+#actualites h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Grille pour les articles */
+#actualites-nba, #actualites-lnb, #actualites-euroligue, #actualites-joueurs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article .content {
+    padding: 20px;
+}
+
+.article h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.article p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.article a {
+    color: #1e2a38;
+    font-weight: 600;
+    padding: 10px;
+    border: 2px solid #1e2a38;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.article a:hover {
+    background-color: #1e2a38;
+    color: white;
+}
+
+/* Barre de filtrage */
+.filtrage {
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+}
+
+.filtrage label {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.filtrage select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.filtrage select:hover {
+    background-color: #f0f0f0;
+    border-color: #1e2a38;
+}
