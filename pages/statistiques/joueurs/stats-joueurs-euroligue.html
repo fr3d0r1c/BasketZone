@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiques Joueurs NBA - BasketZone</title>
+    <meta name="description" content="Consultez les statistiques des joueurs de la NBA, avec des données actualisées sur leurs performances.">
+    <link rel="stylesheet" href="../../../css/statistiques/styles_stats_joueurs.css">
+    <link rel="stylesheet" href="../../../styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>BasketZ<span>&#x1F3C0;</span>ne</h1>
+                <p>Le mode du basket à portée de main</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../../index.html"><span class="basketball-icon-nav">&#x1F3C0;</span></a></li>
+                <li class="deroulant">
+                    <a href="#">Actualités <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                    <ul class="sous">
+                        <li><a href="../../actualites/actualites_joueurs.html">Actualités Joueurs</a></li>
+                        <li class="sous-deroulant">
+                            <a href="#">Actualités Ligues <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                            <ul class="sous-sous">
+                                <li><a href="../../actualites/actualites_nba.html"><img src="../../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                                <li><a href="../../actualites/actualites_euroligue.html"><img src="../../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                <li><a href="../../actualites/actualites_lnb.html"><img src="../../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="deroulant">
+                    <a href="#">Statistiques <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                    <ul class="sous">
+                        <li class="sous-deroulant">
+                            <a href="#">Statistiques Joueurs <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                            <ul class="sous-sous">
+                                <li><a href="stats-joueurs-nba.html"><img src="../../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                                <li><a href="#"><img src="../../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                <li><a href="stats-joueurs-lnb.html"><img src="../../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                            </ul>
+                        </li>
+                        <li class="sous-deroulant">
+                            <a href="#">Statistiuqes Equipes <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                            <ul class="sous-sous">
+                                <li><a href="../../statistiques/equipe/stats-equipes-nba.html"><img src="../../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</li>
+                                <li><a href="../../statistiques/equipe/stats-equipes-euroligue.html"><img src="../../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                <li><a href="../../statistiques/equipe/stats-equipes-lnb.html"><img src="../../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="deroulant">
+                    <a href="#">Classement <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                    <ul class="sous">
+                        <li><a href="../../classement/classement_nba.html"><img src="../../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                        <li><a href="../../classement/classement_euroligue.html"><img src="../../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                        <li><a href="../../classement/classement_lnb.html"><img src="../../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                    </ul>
+                </li>
+                <li class="deroulant">
+                    <a href="#">Matchs <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                    <ul class="sous">
+                        <li><a href="../../matchs/prochains-matchs.html">Matchs à venir</a></li>
+                        <li><a href="../../matchs/resultats.html">Derniers Résultats</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="statistiques-joueurs-euroligue" class="section">
+        <div class="container">
+            <h2>Statistiques des joueurs Euroligue</h2>
+
+            <div class="filter-container">
+                <label for="filter">Trier par :</label>
+                <select id="filter">
+                    <option value="PTS">Points</option>
+                    <option value="AST">Passes</option>
+                    <option value="TRB">Rebonds</option>
+                    <option value="FG%">Pourcentage de tirs</option>
+                    <option value="3P%">Pourcentage de 3 points</option>
+                    <option value="FT%">Pourcentage de lancer franc</option>
+                </select>
+            </div>
+
+            <div id="euroligue-stats-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Joueur</th>
+                            <th>Équipe</th>
+                            <th>Matchs Joués</th>
+                            <th>Minutes</th>
+                            <th>Points</th>
+                            <th>FG%</th>
+                            <th>3P%</th>
+                            <th>FT%</th>
+                            <th>Rebonds</th>
+                            <th>Passes</th>
+                            <th>Steals</th>
+                            <th>Blocks</th>
+                            <th>Fautes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Les données des joueurs seront insérées ici -->
+                    </tbody>
+                </table>
+
+                <div id="pagination-controls">
+                    <button id="prev-page">Précédent</button>
+                    <button id="next-page">Suivant</button>
+                    <span id="page-number">Page 1</span>
+                </div>
+
+            </div>
+    
+        </div>
+    </section>    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BasketZone - Tous droits réservés.</p>
+            <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../../../scripts/Statistiques/Joueurs/script_stats_joueurs_euroligue.js"></script>
+</body>
+
+</html>
