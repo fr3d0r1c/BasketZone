@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BasketZone - Le monde du basket à portée de main</title>
+        <meta name="description" content="BasketZone : Actualités, statistiques, calendriers et forums sur le basket-ball.">
+        <link rel="stylesheet" href="../../styles.css">
+        <link rel="stylesheet" href="../../css/classement/styles_classement_nba.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h1>BasketZ<span>&#x1F3C0;</span>ne</h1>
+                    <p>Le mode du basket à portée de main</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html"><span class="basketball-icon-nav">&#x1F3C0;</span></a></li>
+                    <li class="deroulant">
+                        <a href="#">Actualités <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li><a href="../actualites/actualites_joueurs.html">Actualités Joueurs</a></li>
+                            <li class="sous-deroulant">
+                                <a href="#">Actualités Ligues <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                                <ul class="sous-sous">
+                                    <li><a href="../actualites/actualites_nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                                    <li><a href="../actualites/actualites_euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                    <li><a href="../actualites/actualites_lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <a href="#">Statistiques <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li class="sous-deroulant">
+                                <a href="#">Statistiques Joueurs <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                                <ul class="sous-sous">
+                                    <li><a href="../statistiques/joueurs/stats-joueurs-nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                                    <li><a href="../statistiques/joueurs/stats-joueurs-euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                    <li><a href="../statistiques/joueurs/stats-joueurs-lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                                </ul>
+                            </li>
+                            <li class="sous-deroulant">
+                                <a href="#">Statistiuqes Equipes <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                                <ul class="sous-sous">
+                                    <li><a href="../statistiques/equipe/stats-equipes-nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</li>
+                                    <li><a href="../statistiques/equipe/stats-equipes-euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                    <li><a href="../statistiques/equipe/stats-equipes-lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <a href="#">Classement <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li><a href="#"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                            <li><a href="classement_euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                            <li><a href="classement_lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <a href="#">Matchs <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li><a href="../matchs/prochains-matchs.html">Matchs à venir</a></li>
+                            <li><a href="../matchs/resultats.html">Derniers Résultats</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="classement-nba" class="section">
+            <div class="container">
+                <h2>Classements NBA</h2>
+        
+                <!-- Barre de filtrage -->
+                <div id="filtrage">
+                    <label for="filtre-classement">Filtrer par : </label>
+                    <select id="filtre-classement">
+                        <option value="general">Classement Général</option>
+                        <option value="conferences">Classements par Conférence</option>
+                        <option value="divisions">Classements par Division</option>
+                    </select>
+                </div>
+        
+                <!-- Classement général (visible par défaut) -->
+                <div id="classement-general" class="classement-conf">
+                    <h3>Classement Général</h3>
+                    <table id="generalTable">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Equipe</th>
+                                <th>Matchs Jouées</th>
+                                <th>V</th>
+                                <th>D</th>
+                                <th>%V</th>
+                                <th>GB</th>
+                                <th>Conf</th>
+                                <th>Div</th>
+                                <th>Domicile</th>
+                                <th>Extérieur</th>
+                                <th>Prolongations</th>
+                                <th>10 Derniers Matchs</th>
+                                <th>Streak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Le contenu sera inséré ici par JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+        
+                <!-- Classement par conférence -->
+                <div id="classement-conferences" class="classement-conf" style="display:none;">
+        
+                    <!-- Classement Conférence Est -->
+                    <div id="classement-est">
+                        <h3>Classement Conférence Est</h3>
+                        <table id="generalTableEst">
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Equipe</th>
+                                    <th>Matchs Jouées</th>
+                                    <th>V</th>
+                                    <th>D</th>
+                                    <th>%V</th>
+                                    <th>GB</th>
+                                    <th>Conf</th>
+                                    <th>Div</th>
+                                    <th>Domicile</th>
+                                    <th>Extérieur</th>
+                                    <th>Prolongations</th>
+                                    <th>10 Derniers Matchs</th>
+                                    <th>Streak</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Le contenu sera inséré ici par JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+        
+                    <!-- Classement Conférence Ouest -->
+                    <div id="classement-ouest">
+                        <h3>Classement Conférence Ouest</h3>
+                        <table id="generalTableOuest">
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Equipe</th>
+                                    <th>Matchs Jouées</th>
+                                    <th>V</th>
+                                    <th>D</th>
+                                    <th>%V</th>
+                                    <th>GB</th>
+                                    <th>Conf</th>
+                                    <th>Div</th>
+                                    <th>Domicile</th>
+                                    <th>Extérieur</th>
+                                    <th>Prolongations</th>
+                                    <th>10 Derniers Matchs</th>
+                                    <th>Streak</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Le contenu sera inséré ici par JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+                <!-- Classement par division -->
+                <div id="classement-divisions" class="classement-conf" style="display:none;">
+        
+                    <!-- Divisions Est -->
+                    <div id="division-est">
+                        <h3>Conférence Est</h4>
+                        <div id="division-atlantic">
+                            <h4>Division Atlantic</h4>
+                            <table id="tableAtlantic">
+                                <thead>
+                                    <tr>
+                                        <th>Position</th>
+                                        <th>Equipe</th>
+                                        <th>Matchs Jouées</th>
+                                        <th>V</th>
+                                        <th>D</th>
+                                        <th>%V</th>
+                                        <th>GB</th>
+                                        <th>Conf</th>
+                                        <th>Div</th>
+                                        <th>Domicile</th>
+                                        <th>Extérieur</th>
+                                        <th>Prolongations</th>
+                                        <th>10 Derniers Matchs</th>
+                                        <th>Streak</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Le contenu sera inséré ici par JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Ajoutez les autres divisions ici -->
+                        <div id="division-central">
+                            <h4>Division Central</h4>
+                            <table id="tableCentral">
+                                <thead>
+                                    <tr>
+                                        <th>Position</th>
+                                        <th>Equipe</th>
+                                        <th>Matchs Jouées</th>
+                                        <th>V</th>
+                                        <th>D</th>
+                                        <th>%V</th>
+                                        <th>GB</th>
+                                        <th>Conf</th>
+                                        <th>Div</th>
+                                        <th>Domicile</th>
+                                        <th>Extérieur</th>
+                                        <th>Prolongations</th>
+                                        <th>10 Derniers Matchs</th>
+                                        <th>Streak</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Le contenu sera inséré ici par JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="division-southeast">
+                            <h4>Division Southeast</h4>
+                            <table id="tableSoutheast">
+                                <thead>
+                                    <tr>
+                                        <th>Position</th>
+                                        <th>Equipe</th>
+                                        <th>Matchs Jouées</th>
+                                        <th>V</th>
+                                        <th>D</th>
+                                        <th>%V</th>
+                                        <th>GB</th>
+                                        <th>Conf</th>
+                                        <th>Div</th>
+                                        <th>Domicile</th>
+                                        <th>Extérieur</th>
+                                        <th>Prolongations</th>
+                                        <th>10 Derniers Matchs</th>
+                                        <th>Streak</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Le contenu sera inséré ici par JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        
+                    <!-- Divisions Ouest -->
+                    <div id="division-ouest">
+                        <h3>Conférence Ouest</h3>
+                        <!-- Division Northwest -->
+                        <div id="division-northwest">
+                            <h4>Division Northwest</h4>
+                            <table id="tableNorthwest">
+                                <thead>
+                                    <tr>
+                                        <th>Position</th>
+                                        <th>Equipe</th>
+                                        <th>Matchs Jouées</th>
+                                        <th>V</th>
+                                        <th>D</th>
+                                        <th>%V</th>
+                                        <th>GB</th>
+                                        <th>Conf</th>
+                                        <th>Div</th>
+                                        <th>Domicile</th>
+                                        <th>Extérieur</th>
+                                        <th>Prolongations</th>
+                                        <th>10 Derniers Matchs</th>
+                                        <th>Streak</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <!-- Ajoutez les autres divisions ici -->
+                        <div id="division-pacific">
+                            <h4>Division Pacific</h4>
+                            <table id="tablePacific">
+                                <thead>
+                                    <tr>
+                                        <th>Position</th>
+                                        <th>Equipe</th>
+                                        <th>Matchs Jouées</th>
+                                        <th>V</th>
+                                        <th>D</th>
+                                        <th>%V</th>
+                                        <th>GB</th>
+                                        <th>Conf</th>
+                                        <th>Div</th>
+                                        <th>Domicile</th>
+                                        <th>Extérieur</th>
+                                        <th>Prolongations</th>
+                                        <th>10 Derniers Matchs</th>
+                                        <th>Streak</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Le contenu sera inséré ici par JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="division-southwest">
+                            <h4>Division Southwest</h4>
+                            <table id="tableSouthwest">
+                                <thead>
+                                    <tr>
+                                        <th>Position</th>
+                                        <th>Equipe</th>
+                                        <th>Matchs Jouées</th>
+                                        <th>V</th>
+                                        <th>D</th>
+                                        <th>%V</th>
+                                        <th>GB</th>
+                                        <th>Conf</th>
+                                        <th>Div</th>
+                                        <th>Domicile</th>
+                                        <th>Extérieur</th>
+                                        <th>Prolongations</th>
+                                        <th>10 Derniers Matchs</th>
+                                        <th>Streak</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Le contenu sera inséré ici par JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 BasketZone - Tout Droit réservés.</p>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../../scripts/Classement/script_classement_nba.js"></script> <!-- Lien vers votre fichier JS -->
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classement LNB - BasketZone</title>
+        <meta name="description" content="Classement des équipes de la LNB avec les dernières positions, victoires, défaites, et autres statistiques détaillées des matchs.">
+        <link rel="stylesheet" href="../../styles.css">
+        <link rel="stylesheet" href="../../css/classement/styles_classement_lnb.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h1>BasketZ<span>&#x1F3C0;</span>ne</h1>
+                    <p>Le mode du basket à portée de main</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html"><span class="basketball-icon-nav">&#x1F3C0;</span></a></li>
+                    <li class="deroulant">
+                        <a href="#">Actualités <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li><a href="../actualites/actualites_joueurs.html">Actualités Joueurs</a></li>
+                            <li class="sous-deroulant">
+                                <a href="#">Actualités Ligues <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                                <ul class="sous-sous">
+                                    <li><a href="../actualites/actualites_nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                                    <li><a href="../actualites/actualites_euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                    <li><a href="../actualites/actualites_lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <a href="#">Statistiques <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li class="sous-deroulant">
+                                <a href="#">Statistiques Joueurs <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                                <ul class="sous-sous">
+                                    <li><a href="../statistiques/joueurs/stats-joueurs-nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                                    <li><a href="../statistiques/joueurs/stats-joueurs-euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                    <li><a href="../statistiques/joueurs/stats-joueurs-lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                                </ul>
+                            </li>
+                            <li class="sous-deroulant">
+                                <a href="#">Statistiuqes Equipes <span class="basketball-icon-nav-sous-deroulant">&#x1F3C0;</span></a>
+                                <ul class="sous-sous">
+                                    <li><a href="../statistiques/equipe/stats-equipes-nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</li>
+                                    <li><a href="../statistiques/equipe/stats-equipes-euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                                    <li><a href="../statistiques/equipe/stats-equipes-lnb.html"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <a href="#">Classement <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li><a href="classement_nba.html"><img src="../../images/logo_ligues/nba-logo.png" alt="NBA" class="logo">NBA</a></li>
+                            <li><a href="classement_euroligue.html"><img src="../../images/logo_ligues/euroligue-logo.png" alt="Euroligue" class="logo">Euroligue</a></li>
+                            <li><a href="#"><img src="../../images/logo_ligues/betclic-elite-logo.jpg" alt="Betclic Elite" class="logo">Betclic Elite</a></li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <a href="#">Matchs <span class="basketball-icon-nav-deroulant">&#x1F3C0;</span></a>
+                        <ul class="sous">
+                            <li><a href="../matchs/prochains-matchs.html">Matchs à venir</a></li>
+                            <li><a href="../matchs/resultats.html">Derniers Résultats</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="classement-lnb" class="section">
+            <div class="container">
+                <h2>Classement LNB</h2>
+
+                <table id="lnb-ranking" >
+                    <thead>
+                        <tr>
+                            <th colspan="3">Classement</th>
+                            <th colspan="3">Matches</th>
+                            <th colspan="2">Domicile</th>
+                            <th colspan="2">Extérieur</th>
+                            <th colspan="2">Points</th>
+                            <th colspan="2">Moyenne</th>
+                        </tr>
+                        
+                        <tr>
+                            <th></th>
+                            <th>Equipe</th>
+                            <th>% Victoire</th>
+                            <th>Matchs joués</th>
+                            <th>Victoires</th>
+                            <th>Défaites</th>
+                            <th>Victoires</th>
+                            <th>Défaites</th>
+                            <th>Victoires</th>
+                            <th>Défaites</th>
+                            <th>Points Marqués</th>
+                            <th>Points Concédés</th>
+                            <th>Points Marqués</th>
+                            <th>Points Concédés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Le contenu sera inséré ici par JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 BasketZone - Tous droits réservés.</p>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../../scripts/Classement/script_classement_lnb.js"></script>
+
+    </body>
+</html>
