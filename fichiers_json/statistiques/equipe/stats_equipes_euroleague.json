@@ -1,6 +1,6 @@
 [
     {
-        "Club": "Real Madrid *",
+        "Club": "Real Madrid",
         "G": "39",
         "FG": "31.5",
         "FGA": "63.8",
@@ -25,7 +25,7 @@
         "PPG": "88.7"
     },
     {
-        "Club": "Maccabi Playtika Tel Aviv *",
+        "Club": "Maccabi Playtika Tel Aviv",
         "G": "40",
         "FG": "31.9",
         "FGA": "67.1",
@@ -75,7 +75,7 @@
         "PPG": "85.5"
     },
     {
-        "Club": "Baskonia *",
+        "Club": "Baskonia",
         "G": "39",
         "FG": "30.2",
         "FGA": "63.9",
@@ -100,7 +100,7 @@
         "PPG": "84.6"
     },
     {
-        "Club": "Fenerbah\u00e7e Beko *",
+        "Club": "Fenerbah\u00e7e Beko",
         "G": "41",
         "FG": "30.0",
         "FGA": "62.5",
@@ -150,7 +150,7 @@
         "PPG": "83.0"
     },
     {
-        "Club": "Panathinaikos *",
+        "Club": "Panathinaikos",
         "G": "41",
         "FG": "29.0",
         "FGA": "59.6",
@@ -175,7 +175,7 @@
         "PPG": "82.5"
     },
     {
-        "Club": "AS Monaco *",
+        "Club": "AS Monaco",
         "G": "39",
         "FG": "29.6",
         "FGA": "63.4",
@@ -225,7 +225,7 @@
         "PPG": "81.3"
     },
     {
-        "Club": "Barcelona *",
+        "Club": "Barcelona",
         "G": "39",
         "FG": "30.4",
         "FGA": "63.6",
@@ -300,7 +300,7 @@
         "PPG": "79.5"
     },
     {
-        "Club": "Olympiacos *",
+        "Club": "Olympiacos",
         "G": "41",
         "FG": "28.3",
         "FGA": "59.2",
