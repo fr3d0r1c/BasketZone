@@ -81,44 +81,65 @@
             <div class="container">
                 <h2>Statistiques des équipes Euroligue</h2>
 
+                <button id="toggle-glossaire">Glossaire</button>
+
+                <div id="modal-glossaire" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <span>Glossaire des statistiques Euroligue</span>
+                        <ul>
+                            <li><strong>G</strong> : Nombre de matchs joués</li>
+                            <li><strong>FG</strong> : Field Goals réussis</li>
+                            <li><strong>FGA</strong> : Field Goals tentés</li>
+                            <li><strong>FG%</strong> : Pourcentage de réussite aux tirs</li>
+                            <li><strong>3P</strong> : Tirs à 3 points réussis</li>
+                            <li><strong>3PA</strong> : Tirs à 3 points tentés</li>
+                            <li><strong>3P%</strong> : Pourcentage de réussite à 3 points</li>
+                            <li><strong>2P</strong> : Tirs à 2 points réussis</li>
+                            <li><strong>2PA</strong> : Tirs à 2 points tentés</li>
+                            <li><strong>2P%</strong> : Pourcentage de réussite à 2 points</li>
+                            <li><strong>FT</strong> : Lancers francs réussis</li>
+                            <li><strong>FTA</strong> : Lancers francs tentés</li>
+                            <li><strong>FT%</strong> : Pourcentage de réussite aux lancers francs</li>
+                            <li><strong>ORB</strong> : Rebond offensif</li>
+                            <li><strong>DRB</strong> : Rebond défensif</li>
+                            <li><strong>AST</strong> : Passes décisives</li>
+                            <li><strong>STL</strong> : Interceptions</li>
+                            <li><strong>BLK</strong> : Contres</li>
+                            <li><strong>TOV</strong> : Balles perdues</li>
+                            <li><strong>PF</strong> : Fautes personnelles</li>
+                            <li><strong>PPG</strong> : Points par match</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <table>
                     <thead>
                         <tr>
-                            <th colspan="3">Classement</th>
-                            <th colspan="3">Tirs</th>
-                            <th colspan="3">3 Points</th>
-                            <th colspan="3">2 Points</th>
-                            <th colspan="3">Lancers Francs</th>
-                            <th colspan="3">Rebonds</th>
-                            <th colspan="3">P.I.C</th>
-                            <th colspan="2">Stats Contres</th>
-                            <th colspan="1"><span>&#x1F3C0;</span></th>
-                        </tr>
-                        <tr>
                             <th></th>
-                            <th>Equipe</th>
-                            <th>Matchs</th>
-                            <th>Tirs réussis</th>
-                            <th>Tirs Tentés</th>
-                            <th>% Tirs</th>
-                            <th>3 Points Réussis</th>
-                            <th>3 Points Tentés</th>
-                            <th>% 3 Points</th>
-                            <th>2 Points Réussis</th>
-                            <th>2 Points Tentés</th>
-                            <th>% 2 Points</th>
-                            <th>Lancers Francs Réussis</th>
-                            <th>Lancers Francs Tentés</th>
-                            <th>% Lancers Francs</th>
-                            <th>Rebonds Offensifs</th>
-                            <th>Rebonds Défensifs</th>
-                            <th>Rebonds</th>
-                            <th>Passes</th>
-                            <th>Interceptions</th>
-                            <th>Contres</th>
-                            <th>Pertes de balles</th>
-                            <th>Fautes</th>
-                            <th>Points</th>
+                            <th>Club</th>
+                            <th>G</th>
+                            <th>FG</th>
+                            <th>FGA</th>
+                            <th>FG%</th>
+                            <th>3P</th>
+                            <th>3PA</th>
+                            <th>3P%</th>
+                            <th>2P</th>
+                            <th>2PA</th>
+                            <th>2P%</th>
+                            <th>FT</th>
+                            <th>FTA</th>
+                            <th>FT%</th>
+                            <th>ORB</th>
+                            <th>DRB</th>
+                            <th>DRB</th>
+                            <th>AST</th>
+                            <th>STL</th>
+                            <th>BLK</th>
+                            <th>TOV</th>
+                            <th>PF</th>
+                            <th>PPG</th>
                         </tr>
                     </thead>
                     <tbody id="euroligue-stats">

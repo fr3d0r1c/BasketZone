@@ -81,23 +81,69 @@
             <div class="container">
                 <h2>Statistiques des équipes NBA</h2>
 
+                <button id="btn-glossaire">Glossaire 📘</button>
+
+                <div id="modal-glossaire" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Glossaire des statistiques NBA</h3>
+                        <ul>
+                            <li><strong>W</strong> : Victoires</li>
+                            <li><strong>L</strong> : Défaites</li>
+                            <li><strong>W%</strong> : Pourcentage de victoires</li>
+                            <li><strong>PTS</strong> : Points marqués</li>
+                            <li><strong>FGM</strong> : Tirs réussis</li>
+                            <li><strong>FGA</strong> : Tirs tentés</li>
+                            <li><strong>FG%</strong> : Pourcentage de réussite aux tirs</li>
+                            <li><strong>3PM</strong> : 3 points marqués</li>
+                            <li><strong>3PA</strong> : 3 points tentés</li>
+                            <li><strong>3P%</strong> : Pourcentage à 3 points</li>
+                            <li><strong>FTM</strong> : Lancers francs réussis</li>
+                            <li><strong>FTA</strong> : Lancers francs tentés</li>
+                            <li><strong>FT%</strong> : Pourcentage de réussite aux lancers</li>
+                            <li><strong>OREB</strong> : Rebond offensif</li>
+                            <li><strong>DREB</strong> : Rebond défensif</li>
+                            <li><strong>REB</strong> : Rebond total</li>
+                            <li><strong>AST</strong> : Passes décisives</li>
+                            <li><strong>TOV</strong> : Balles perdues</li>
+                            <li><strong>STL</strong> : Interceptions</li>
+                            <li><strong>BLK</strong> : Contres</li>
+                            <li><strong>BLKA</strong> : Contres subis</li>
+                            <li><strong>PF</strong> : Fautes commises</li>
+                            <li><strong>PFD</strong> : Fautes provoquées</li>
+                            <li><strong>+/-</strong> : Différentiel de points sur le terrain</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <table>
                     <thead>
                         <tr>
                             <th></th>
                             <th>Equipe</th>
-                            <th>Victoires</th>
-                            <th>Défaites</th>
-                            <th>Pourcentage de Victoires</th>
-                            <th>Points Par Match</th>
-                            <th>% Tirs</th>
-                            <th>% Tirs à 3 Points</th>
-                            <th>% Lancers Francs</th>
-                            <th>Rebonds</th>
-                            <th>Passes</th>
-                            <th>Pertes de balles</th>
-                            <th>Contres</th>
-                            <th>Contres encaissés</th>
+                            <th>W</th>
+                            <th>L</th>
+                            <th>W%</th>
+                            <th>PTS</th>
+                            <th>FGM</th>
+                            <th>FGA</th>
+                            <th>FG%</th>
+                            <th>3PM</th>
+                            <th>3PA</th>
+                            <th>3P%</th>
+                            <th>FTM</th>
+                            <th>FTA</th>
+                            <th>FT%</th>
+                            <th>OREB</th>
+                            <th>DREB</th>
+                            <th>REB</th>
+                            <th>AST</th>
+                            <th>TOV</th>
+                            <th>STL</th>
+                            <th>BLK</th>
+                            <th>BLKA</th>
+                            <th>PF</th>
+                            <th>PFD</th>
                             <th>+/-</th>
                         </tr>
                     </thead>

@@ -48,8 +48,12 @@ fetch('../../../fichiers_json/statistiques/joueurs/stats_joueurs_nba.json')
             });
         }
 
+        // Trier les joueurs par nom (ordre alphabétique croissant)
+        players.sort((a, b) => a.Player.localeCompare(b.Player));
+
         // Afficher les joueurs initialement
         displayPlayers(players);
+
 
         // Trier les joueurs selon le critère sélectionné
         const filterSelect = document.getElementById('filter');

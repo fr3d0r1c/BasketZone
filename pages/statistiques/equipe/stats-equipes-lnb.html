@@ -77,54 +77,82 @@
             </nav>
         </header>
 
+        
+
+
         <section id="statistiques-equipes-lnb" class="section">
             <div class="container">
                 <h2>Statistiques des équipes LNB</h2>
 
+                <button id="btn-glossaire">Glossaire</button>
+
+                <div id="modal-glossaire" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Glossaire des statistiques LNB</h3>
+                        <ul>
+                            <li><strong>MJ</strong> : Matchs joués</li>
+                            <li><strong>V</strong> : Victoires</li>
+                            <li><strong>D</strong> : Défaites</li>
+                            <li><strong>%V</strong> : Pourcentage de victoires</li>
+                            <li><strong>MIN</strong> : Minutes jouées</li>
+                            <li><strong>PTS</strong> : Points</li>
+                            <li><strong>2R</strong> : Réussites à 2 points</li>
+                            <li><strong>2T</strong> : Tentatives à 2 points</li>
+                            <li><strong>2P%</strong> : Pourcentage à 2 points</li>
+                            <li><strong>3R</strong> : Réussites à 3 points</li>
+                            <li><strong>3T</strong> : Tentatives à 3 points</li>
+                            <li><strong>3P%</strong> : Pourcentage à 3 points</li>
+                            <li><strong>LR</strong> : Lancers francs réussis</li>
+                            <li><strong>LT</strong> : Lancers francs tentés</li>
+                            <li><strong>LF%</strong> : Pourcentage aux lancers francs</li>
+                            <li><strong>RO</strong> : Rebonds offensifs</li>
+                            <li><strong>RD</strong> : Rebonds défensifs</li>
+                            <li><strong>RT</strong> : Rebonds totaux</li>
+                            <li><strong>PD</strong> : Passes décisives</li>
+                            <li><strong>CT</strong> : Contres</li>
+                            <li><strong>CS</strong> : Contres subis</li>
+                            <li><strong>IN</strong> : Interceptions</li>
+                            <li><strong>BP</strong> : Balles perdues</li>
+                            <li><strong>FTE</strong> : Fautes effectuées</li>
+                            <li><strong>FPR</strong> : Fautes provoquées</li>
+                            <li><strong>EVAL</strong> : Évaluation</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <table>
                     <thead>
-                        
-                        <tr>
-                            <th colspan="2">Classement</th>
-                            <th colspan="4">Matches</th>
-                            <th colspan="1">⏱️</th>
-                            <th colspan="1"><span>&#x1F3C0;</span></th>
-                            <th colspan="3">2 Points</th>
-                            <th colspan="3">3 Points</th>
-                            <th colspan="3">Lancers Francs</th>
-                            <th colspan="3">Rebonds</th>
-                            <th colspan="8">Autres</th>
-                        </tr>
 
                         <tr>
                             <th></th>
                             <th>Equipe</th>
-                            <th>Matchs</th>
-                            <th>Victoire</th>
-                            <th>Défaites</th>
-                            <th>% Victoires</th>
-                            <th>Minutes</th>
-                            <th>Points</th>
-                            <th>2 Points Réussis</th>
-                            <th>2 Points Tentés</th>
-                            <th>% 2 Points</th>
-                            <th>3 Points Réussis</th>
-                            <th>3 Points Tentés</th>
-                            <th>% 3 Points</th>
-                            <th>Lancers Francs Réussis</th>
-                            <th>Lancers Francs Tentés</th>
-                            <th>% Lancers Francs</th>
-                            <th>Rebonds Offensifs</th>
-                            <th>Rebonds Défensifs</th>
-                            <th>Rebonds Totaux</th>
-                            <th>Passes Décisives</th>
-                            <th>Contres</th>
+                            <th>MJ</th>
+                            <th>V</th>
+                            <th>D</th>
+                            <th>%V</th>
+                            <th>MIN</th>
+                            <th>PTS</th>
+                            <th>2R</th>
+                            <th>2T</th>
+                            <th>2P%</th>
+                            <th>3R</th>
+                            <th>3T</th>
+                            <th>3P%</th>
+                            <th>LR</th>
+                            <th>LT</th>
+                            <th>LF%</th>
+                            <th>RO</th>
+                            <th>RD</th>
+                            <th>RT</th>
+                            <th>PD</th>
+                            <th>CT</th>
                             <th>CS</th>
-                            <th>Interceptions</th>
-                            <th>Ballons perdus</th>
+                            <th>IN</th>
+                            <th>BP</th>
                             <th>FTE</th>
                             <th>FPR</th>
-                            <th>Evaluations</th>
+                            <th>EVAL</th>
                         </tr>
                     </thead>
                     <tbody id="lnb-stats">

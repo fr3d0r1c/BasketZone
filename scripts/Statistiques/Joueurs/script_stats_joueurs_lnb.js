@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();  // Parse le JSON
             })
             .then(data => {
+                data.sort((a,b) => a.Player.localeCompare(b.Player));
                 allPlayerStats = data;
                 displayPage(currentPage);
 

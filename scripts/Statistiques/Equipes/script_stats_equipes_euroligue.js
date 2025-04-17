@@ -38,3 +38,21 @@ fetch('../../../fichiers_json/statistiques/equipe/stats_equipes_euroleague.json'
         });
     })
     .catch(error => console.error('Erreur lors du chargement du fichier JSON:', error));
+
+const btnGlossaire = document.getElementById("toggle-glossaire");
+const modal = document.getElementById("modal-glossaire");
+const closeModal = document.querySelector(".modal .close");
+    
+btnGlossaire.addEventListener("click", () => {
+    modal.style.display = "block";
+});
+    
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+    
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
